@@ -369,7 +369,7 @@ if(nrow(world_coffee_inner) < nrow(coffee_data)) {
 ```{r}
 drc <- stringr::str_subset(world$name_long, "Dem*, Congo")
 
-coffee_data$name_long{stringr::str_detect(coffee_data$name_long, "Congo")}
+coffee_data$name_long{stringr::str_detect(coffee_data$name_long, by = "Congo")}
 
 world_coffee_inner <- inner_join(world, coffee_data, by = "name_long)")
 ```
